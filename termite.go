@@ -38,3 +38,15 @@ func (o *Output) PrintSpace(amount int) {
 		goterm.Printf("\n")
 	}
 }
+
+func (o *Output) Clear() {
+	goterm.Clear()
+}
+
+func (o *Output) Start() {
+	goterm.MoveCursor(1, 1)
+}
+
+func (o *Output) End() {
+	goterm.Flush()
+}
